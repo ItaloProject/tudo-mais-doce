@@ -59,21 +59,28 @@
   /* ── Mobile menu ────────────────────────────────────────── */
   const hamburger = document.getElementById('hamburger');
   const navMenu   = document.getElementById('navMenu');
+  const backdrop  = document.getElementById('menuBackdrop');
+
+  function closeMenu() {
+    hamburger.classList.remove('open');
+    navMenu.classList.remove('open');
+    backdrop && backdrop.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  }
+
   if (hamburger && navMenu) {
     hamburger.addEventListener('click', () => {
       const open = hamburger.classList.toggle('open');
       navMenu.classList.toggle('open');
+      backdrop && backdrop.classList.toggle('open');
       hamburger.setAttribute('aria-expanded', open);
       document.body.style.overflow = open ? 'hidden' : '';
     });
     navMenu.querySelectorAll('.nav-link').forEach(a => {
-      a.addEventListener('click', () => {
-        hamburger.classList.remove('open');
-        navMenu.classList.remove('open');
-        hamburger.setAttribute('aria-expanded', 'false');
-        document.body.style.overflow = '';
-      });
+      a.addEventListener('click', closeMenu);
     });
+    if (backdrop) backdrop.addEventListener('click', closeMenu);
   }
 
   /* ── Scroll Progress (JS fallback for older browsers) ───── */

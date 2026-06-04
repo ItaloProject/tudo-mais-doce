@@ -1497,7 +1497,16 @@ body.no-scroll { overflow: hidden; }
     z-index: 699;
   }
   .nav-menu.open .nav-link { font-size: 1.5rem; }
+  .menu-backdrop {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 698;
+  }
+  .menu-backdrop.open { display: block; }
   .hamburger { display: flex; }
+  .hamburger span { pointer-events: none; }
+  .hamburger.open { z-index: 701; position: relative; }
   .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(4px, 5px); }
   .hamburger.open span:nth-child(2) { transform: rotate(-45deg) translate(4px, -5px); }
   .produto { grid-template-columns: 1fr; min-height: auto; }
