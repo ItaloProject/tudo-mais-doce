@@ -194,6 +194,28 @@
     obs.observe(wrap);
   })();
 
+  /* ── Depoimentos: drag to scroll ────────────────────────── */
+  (function () {
+    const track = document.querySelector('.vozes-track');
+    if (!track) return;
+    let isDown = false, startX, scrollLeft;
+
+    track.addEventListener('mousedown', e => {
+      isDown = true;
+      track.style.cursor = 'grabbing';
+      startX = e.pageX - track.offsetLeft;
+      scrollLeft = track.scrollLeft;
+    });
+    track.addEventListener('mouseleave', () => { isDown = false; track.style.cursor = 'grab'; });
+    track.addEventListener('mouseup',    () => { isDown = false; track.style.cursor = 'grab'; });
+    track.addEventListener('mousemove', e => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - track.offsetLeft;
+      track.scrollLeft = scrollLeft - (x - startX) * 1.4;
+    });
+  })();
+
   /* ── Video autoplay fallback (mobile precisa de interação) ── */
   (function () {
     const vid = document.querySelector('.vid-bg-loop');

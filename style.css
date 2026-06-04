@@ -1114,7 +1114,8 @@ body.no-scroll { overflow: hidden; }
 .vozes {
   background: var(--bg2);
   padding: 100px 0 60px;
-  overflow: hidden;
+  overflow-y: clip;   /* mantém decoração contida verticalmente */
+  overflow-x: visible; /* libera o scroll horizontal do track */
 }
 .vozes-header {
   max-width: 1200px;
@@ -1132,14 +1133,17 @@ body.no-scroll { overflow: hidden; }
 .vozes-track {
   display: flex;
   gap: 20px;
-  padding: 0 28px 24px;
+  padding: 0 28px 32px 28px;
   overflow-x: auto;
+  overflow-y: visible;
   scroll-snap-type: x mandatory;
   scroll-padding: 28px;
   -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(201,145,58,.4) transparent;
   max-width: 1256px;
   margin: 0 auto;
+  cursor: grab;
 }
 .vozes-track::-webkit-scrollbar { display: none; }
 .voz {
