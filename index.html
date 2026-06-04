@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tudo Mais Doce | Doceria Artesanal</title>
+  <link rel="icon" href="images/marca/favicon.png" type="image/png"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- GRAIN -->
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- SCROLL PROGRESS -->
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <!-- CURSOR -->
+  <div class="cur-dot"  id="curDot"  aria-hidden="true"></div>
+  <div class="cur-ring" id="curRing" aria-hidden="true"></div>
+
+  <!-- ═══ PRELOADER ═══ -->
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="pre-inner">
+      <div class="logo-alive logo-alive--lg">
+        <div class="logo-glow"></div>
+        <div class="logo-ring"></div>
+        <img src="images/marca/logo.png" alt="" class="pre-logo-img"
+             onerror="this.style.display='none';document.querySelector('.pre-wordmark').style.display='flex'"/>
+        <span class="logo-sp sp1">✦</span>
+        <span class="logo-sp sp2">✦</span>
+        <span class="logo-sp sp3">✦</span>
+        <span class="logo-sp sp4">·</span>
+        <span class="logo-sp sp5">✦</span>
+      </div>
+      <div class="pre-wordmark">
+        <span class="pre-sup">Tudo Mais</span>
+        <span class="pre-main">Doce</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ NAVBAR ═══ -->
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#inicio" class="nav-brand">
+        <div class="logo-alive">
+          <div class="logo-glow"></div>
+          <div class="logo-ring"></div>
+          <img src="images/marca/logo.png" alt="Tudo Mais Doce" class="nav-logo"
+               onerror="this.style.display='none'"/>
+          <span class="logo-sp sp1">✦</span>
+          <span class="logo-sp sp2">✦</span>
+          <span class="logo-sp sp3">✦</span>
+          <span class="logo-sp sp4">·</span>
+        </div>
+        <span class="nav-logo-txt" style="display:none">Tudo Mais Doce</span>
+      </a>
+      <nav class="nav-menu" id="navMenu" role="navigation">
+        <a href="#produtos" class="nav-link">Cardápio</a>
+        <a href="#sobre"    class="nav-link">Sobre</a>
+        <a href="#vozes"    class="nav-link">Depoimentos</a>
+        <a href="#contato"  class="nav-link">Contato</a>
+      </nav>
+      <a href="#contato" class="nav-cta">Fazer Pedido</a>
+      <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="hero" id="inicio">
+    <div class="hero-bg-img">
+      <img src="images/produtos/hero-principal.jpg" alt="" loading="eager"
+           onerror="this.style.display='none'"/>
+    </div>
+    <div class="hero-overlay"></div>
+
+    <p class="hero-label" data-reveal="fade">Doceria Artesanal Premium</p>
+
+    <h1 class="hero-title">
+      <span class="hero-line"><b>Feito com amor</b></span>
+      <span class="hero-line hero-italic"><b><em>para adoçar</em></b></span>
+      <span class="hero-line"><b>seu dia</b></span>
+    </h1>
+
+    <p class="hero-desc" data-reveal="fade" data-delay=".9">
+      Mais que doce — momentos especiais.<br class="br-desk"/>
+      Brigadeiro 70% cacau, ovos recheados e bolos que emocionam.
+    </p>
+
+    <div class="hero-btns" data-reveal="fade" data-delay="1.05">
+      <a href="#produtos" class="btn-solid">Ver Cardápio</a>
+      <a href="#sobre"    class="btn-line">Nossa História</a>
+    </div>
+
+    <div class="hero-scroll" data-reveal="fade" data-delay="1.3" aria-hidden="true">
+      <span class="scroll-track"><span class="scroll-dot"></span></span>
+      <span class="scroll-lbl">scroll</span>
+    </div>
+
+    <!-- Big decorative text -->
+    <span class="hero-mega" aria-hidden="true">Doce</span>
+  </section>
+
+  <!-- ═══ RIBBON ═══ -->
+  <div class="ribbon" aria-hidden="true">
+    <div class="ribbon-track">
+      <span>Bolo Gelado</span><span class="dot">·</span>
+      <span>Brigadeiro 70% Cacau</span><span class="dot">·</span>
+      <span>Ovo Recheado</span><span class="dot">·</span>
+      <span>Feito com Amor</span><span class="dot">·</span>
+      <span>Bolo Naked Floral</span><span class="dot">·</span>
+      <span>Momentos Especiais</span><span class="dot">·</span>
+      <span>Bolo Gelado</span><span class="dot">·</span>
+      <span>Brigadeiro 70% Cacau</span><span class="dot">·</span>
+      <span>Ovo Recheado</span><span class="dot">·</span>
+      <span>Feito com Amor</span><span class="dot">·</span>
+      <span>Bolo Naked Floral</span><span class="dot">·</span>
+      <span>Momentos Especiais</span><span class="dot">·</span>
+    </div>
+  </div>
+
+  <!-- ═══ VIDEO PREVIEW ═══ -->
+  <!--
+    ┌─────────────────────────────────────────────────┐
+    │  Para ativar o vídeo, coloque o link aqui:      │
+    │  data-video="https://www.youtube.com/embed/ID"  │
+    │  Exemplo: ...embed/dQw4w9WgXcQ?autoplay=1       │
+    └─────────────────────────────────────────────────┘
+  -->
+  <section class="vid-section" id="video-preview"
+           data-video="images/galeria/video-preview.mp4"
+           data-reveal="up">
+    <div class="vid-thumb">
+      <!-- Vídeo em loop silencioso como fundo da thumbnail -->
+      <video class="vid-bg vid-bg-loop" autoplay muted loop playsinline
+             poster="images/produtos/bolo-gelado-2.webp">
+        <source src="images/galeria/video-preview.mp4" type="video/mp4"/>
+        <!-- fallback para imagem caso o vídeo não carregue -->
+        <img src="images/produtos/bolo-gelado-2.webp" alt="Bastidores Tudo Mais Doce"
+             onerror="this.src='images/produtos/bolo-gelado.jpg'"/>
+      </video>
+      <div class="vid-overlay"></div>
+
+      <div class="vid-copy">
+        <span class="eyebrow light">Nos Bastidores</span>
+        <h2>Veja como cada doce<br/>é feito com <em>amor</em></h2>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══ PRODUTOS ═══ -->
+  <section class="produtos" id="produtos">
+    <div class="produtos-header" data-reveal="up">
+      <span class="eyebrow">Nossos Sabores</span>
+      <h2>Cardápio <em>Premium</em></h2>
+    </div>
+
+    <!-- 01 — Bolo Gelado Brigadeiro -->
+    <article class="produto" data-reveal="up">
+      <div class="produto-media bolo-gelado-bg">
+        <img src="images/produtos/bolo-gelado.jpg" alt="Bolo Gelado Brigadeiro 70% Cacau" loading="lazy" onerror="this.style.display='none'"/>
+        <span class="produto-label-img">Mais Pedido</span>
+      </div>
+      <div class="produto-copy">
+        <span class="produto-n" aria-hidden="true">01</span>
+        <span class="produto-tag">~350g · Pote transparente</span>
+        <h3>Bolo Gelado<br/>Brigadeiro</h3>
+        <p>Brigadeiro cremoso de 70% cacau sobre bolo úmido e granulado crocante — aproximadamente 350g de puro prazer. Perfeito gelado ou em temperatura ambiente.</p>
+        <div class="produto-rodape">
+          <strong class="produto-preco">Consulte</strong>
+          <a href="#contato" class="btn-produto">Pedir Agora</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- 02 — Ovo Recheado -->
+    <article class="produto produto-inv" data-reveal="up">
+      <div class="produto-media ovo-bg">
+        <img src="images/produtos/ovo-recheado.png" alt="Ovo Recheado Especial" loading="lazy" onerror="this.style.display='none'"/>
+        <span class="produto-label-img sazonal">Especial</span>
+      </div>
+      <div class="produto-copy">
+        <span class="produto-n" aria-hidden="true">02</span>
+        <span class="produto-tag">Edição Especial</span>
+        <h3>Ovo Recheado<br/>Especial</h3>
+        <p>Ovo artesanal de chocolate belga recheado com bolo úmido, brigadeiro gourmet e granulado — uma obra de arte que derrete na boca. Disponível sob encomenda.</p>
+        <div class="produto-rodape">
+          <strong class="produto-preco">Consulte</strong>
+          <a href="#contato" class="btn-produto">Encomendar</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- 03 — Bolo Naked Floral -->
+    <article class="produto" data-reveal="up">
+      <div class="produto-media naked-bg">
+        <img src="images/produtos/bolo-naked.png" alt="Bolo Naked Floral" loading="lazy" onerror="this.style.display='none'"/>
+      </div>
+      <div class="produto-copy">
+        <span class="produto-n" aria-hidden="true">03</span>
+        <span class="produto-tag">Celebrações · Eventos</span>
+        <h3>Bolo Naked<br/>Floral</h3>
+        <p>Elegância em cada detalhe: naked cake coberto com creme artesanal e flores naturais. Perfeito para aniversários, casamentos e momentos inesquecíveis.</p>
+        <div class="produto-rodape">
+          <strong class="produto-preco">Consulte</strong>
+          <a href="#contato" class="btn-produto">Encomendar</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- 04 — Brigadeiro Gourmet -->
+    <article class="produto produto-inv" data-reveal="up">
+      <div class="produto-media brigadeiro-bg">
+        <img src="images/produtos/brigadeiro.jpg" alt="Brigadeiro Gourmet" loading="lazy" onerror="this.style.display='none'"/>
+      </div>
+      <div class="produto-copy">
+        <span class="produto-n" aria-hidden="true">04</span>
+        <span class="produto-tag">Unidade · Caixas</span>
+        <h3>Brigadeiro<br/>Artesanal</h3>
+        <p>O clássico brasileiro feito do jeito certo: brigadeiro cremoso de verdade, com granulado crocante e aquele sabor que lembra casa. Disponível em caixas para presentear.</p>
+        <div class="produto-rodape">
+          <strong class="produto-preco">Consulte</strong>
+          <a href="#contato" class="btn-produto">Pedir Agora</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- 05 — Cupcake Artesanal -->
+    <article class="produto" data-reveal="up">
+      <div class="produto-media cupcake-bg">
+        <img src="images/produtos/cupcake.jpg" alt="Cupcake Artesanal" loading="lazy" onerror="this.style.display='none'"/>
+        <span class="produto-label-img new">Novo</span>
+      </div>
+      <div class="produto-copy">
+        <span class="produto-n" aria-hidden="true">05</span>
+        <span class="produto-tag">Unidade</span>
+        <h3>Cupcake<br/>Artesanal</h3>
+        <p>Massa fofinha de chocolate com frosting cremoso decorado à mão. Sabores variados a cada semana — siga o Instagram para conferir.</p>
+        <div class="produto-rodape">
+          <strong class="produto-preco">Consulte</strong>
+          <a href="#contato" class="btn-produto">Pedir Agora</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- 06 — Kit Presente -->
+    <article class="produto produto-inv" data-reveal="up">
+      <div class="produto-media kit-bg">
+        <img src="images/produtos/kit-presente.jpg" alt="Kit Presente Especial" loading="lazy" onerror="this.style.display='none'"/>
+      </div>
+      <div class="produto-copy">
+        <span class="produto-n" aria-hidden="true">06</span>
+        <span class="produto-tag">Kit Presente · Personalizado</span>
+        <h3>Kit<br/>Presente</h3>
+        <p>Monte seu kit com os favoritos: bolo gelado, brigadeiros, cupcakes e mais. Embalagem exclusiva com laço e cartão personalizado. Surpreenda quem você ama.</p>
+        <div class="produto-rodape">
+          <strong class="produto-preco">a partir de R$ 89</strong>
+          <a href="#contato" class="btn-produto">Personalizar</a>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <!-- ═══ SOBRE ═══ -->
+  <section class="sobre" id="sobre">
+    <div class="sobre-wrap">
+      <div class="sobre-img-side">
+        <div class="sobre-img-clip" data-reveal="clip">
+          <div class="sobre-img-fallback"></div>
+          <img src="images/galeria/sobre-clientes.png" alt="Clientes felizes Tudo Mais Doce" loading="lazy"
+               onerror="this.style.display='none'"/>
+        </div>
+        <div class="sobre-badge" data-reveal="pop">
+          <div class="badge-foto-wrap">
+            <img src="images/galeria/clientes-felizes.png" alt="Clientes felizes" class="badge-foto"/>
+          </div>
+          <div class="badge-info">
+            <span class="badge-n">500<sup>+</sup></span>
+            <span class="badge-l">Clientes felizes</span>
+          </div>
+        </div>
+      </div>
+      <div class="sobre-txt">
+        <span class="eyebrow" data-reveal="up">Nossa História</span>
+        <h2 data-reveal="up" data-delay=".1">
+          Mais que doce —<br/><em>momentos especiais</em>
+        </h2>
+        <div class="sobre-rule" data-reveal="rule"></div>
+        <p data-reveal="up" data-delay=".2">
+          A Tudo Mais Doce nasceu de uma paixão pelo chocolate e pela arte de transformar ingredientes simples em memórias afetivas. Cada bolo, cada brigadeiro e cada ovo recheado é preparado com dedicação para adoçar o seu dia.
+        </p>
+        <p data-reveal="up" data-delay=".3">
+          Nosso ingrediente principal não está na receita — está no amor com que cada doce é feito. Por isso nossos clientes voltam sempre.
+        </p>
+        <div class="sobre-quote" data-reveal="up" data-delay=".35">
+          <span>"Feito com amor para adoçar seu dia ♡"</span>
+        </div>
+        <ul class="sobre-pilares" data-reveal="up" data-delay=".4">
+          <li><span class="pilar-ico">🍫</span><span>Brigadeiro 70% cacau belga</span></li>
+          <li><span class="pilar-ico">🎂</span><span>Bolos gelados e decorados sob encomenda</span></li>
+          <li><span class="pilar-ico">🎁</span><span>Embalagem personalizada para presente</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ NÚMEROS ═══ -->
+  <section class="numeros">
+    <div class="numeros-grid">
+      <div class="numero-item" data-reveal="up">
+        <b class="n-val" data-count="500" data-suffix="+">0</b>
+        <span class="n-lbl">Clientes satisfeitos</span>
+      </div>
+      <div class="numero-item" data-reveal="up" data-delay=".1">
+        <b class="n-val" data-count="3"   data-suffix="+">0</b>
+        <span class="n-lbl">Anos de experiência</span>
+      </div>
+      <div class="numero-item" data-reveal="up" data-delay=".2">
+        <b class="n-val" data-count="30"  data-suffix="+">0</b>
+        <span class="n-lbl">Sabores exclusivos</span>
+      </div>
+      <div class="numero-item" data-reveal="up" data-delay=".3">
+        <b class="n-val" data-count="100" data-suffix="%">0</b>
+        <span class="n-lbl">Feito artesanalmente</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ DEPOIMENTOS ═══ -->
+  <section class="vozes" id="vozes">
+    <div class="vozes-header" data-reveal="up">
+      <span class="eyebrow">Avaliações</span>
+      <h2>O que nossos clientes <em>dizem</em></h2>
+    </div>
+    <div class="vozes-track" role="list">
+      <div class="voz" role="listitem" data-reveal="up" data-delay="0">
+        <div class="voz-stars">★★★★★</div>
+        <blockquote>"O bolo gelado de brigadeiro é incrível! O 70% cacau faz toda a diferença. Peço toda semana e nunca me decepciono!"</blockquote>
+        <footer class="voz-autor">
+          <div class="voz-av">A</div>
+          <div><strong>Ana Clara</strong><span>Cliente desde 2023</span></div>
+        </footer>
+      </div>
+      <div class="voz voz-dest" role="listitem" data-reveal="up" data-delay=".1">
+        <div class="voz-stars">★★★★★</div>
+        <blockquote>"Encomendei o ovo recheado para o aniversário da minha mãe — ela simplesmente amou! Apresentação linda, sabor espetacular. Nota 10 pra Tudo Mais Doce!"</blockquote>
+        <footer class="voz-autor">
+          <div class="voz-av">M</div>
+          <div><strong>Marcos Oliveira</strong><span>Cliente desde 2022</span></div>
+        </footer>
+      </div>
+      <div class="voz" role="listitem" data-reveal="up" data-delay=".2">
+        <div class="voz-stars">★★★★★</div>
+        <blockquote>"O bolo naked floral ficou perfeito pro meu casamento! Delicado, gostoso e a entrega foi super cuidadosa. Super recomendo!"</blockquote>
+        <footer class="voz-autor">
+          <div class="voz-av">J</div>
+          <div><strong>Juliana Santos</strong><span>Cliente desde 2024</span></div>
+        </footer>
+      </div>
+      <div class="voz" role="listitem" data-reveal="up" data-delay=".3">
+        <div class="voz-stars">★★★★★</div>
+        <blockquote>"Os brigadeiros gourmet são os melhores que já comi! Minha família toda virou fã. Mais que doce, momentos especiais mesmo!"</blockquote>
+        <footer class="voz-autor">
+          <div class="voz-av">R</div>
+          <div><strong>Rafaela Costa</strong><span>Cliente desde 2023</span></div>
+        </footer>
+      </div>
+    </div>
+    <div class="vozes-hint" aria-hidden="true">← deslize →</div>
+  </section>
+
+  <!-- ═══ CORTINA + VÍDEO 2 ═══ -->
+  <div class="curtain-wrap" id="curtainWrap">
+    <div class="curtain-left"  id="curtainLeft"  aria-hidden="true"><div class="curtain-fold"></div></div>
+    <div class="curtain-right" id="curtainRight" aria-hidden="true"><div class="curtain-fold"></div></div>
+
+    <section class="vid-section vid-section--2">
+      <div class="vid-thumb">
+        <video class="vid-bg vid-bg-loop" autoplay muted loop playsinline
+               poster="images/produtos/bolo-gelado.jpg">
+          <source src="images/galeria/video-preview-2.mp4" type="video/mp4"/>
+        </video>
+        <div class="vid-overlay"></div>
+        <div class="vid-copy">
+          <span class="eyebrow light">Nossos Doces</span>
+          <h2>Uma experiência<br/>para os <em>sentidos</em></h2>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ═══ CONTATO ═══ -->
+  <section class="contato" id="contato">
+    <div class="contato-grid">
+      <div class="contato-lado">
+        <span class="eyebrow light" data-reveal="up">Fale Conosco</span>
+        <h2 class="light" data-reveal="up" data-delay=".1">
+          Vamos adoçar<br/>o seu <em>dia</em>
+        </h2>
+        <p data-reveal="up" data-delay=".2">
+          Faça seu pedido pelo WhatsApp ou use o formulário. Respondemos em até 2 horas.
+        </p>
+        <a href="https://wa.me/5511999999999?text=Olá! Quero fazer um pedido 🍫"
+           class="btn-wpp" target="_blank" rel="noopener" data-reveal="up" data-delay=".3">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+          Chamar no WhatsApp
+        </a>
+        <p class="contato-social" data-reveal="up" data-delay=".4">
+          Siga-nos:
+          <a href="#">Instagram</a>
+          <a href="#">Facebook</a>
+        </p>
+      </div>
+
+      <form class="contato-form" id="contatoForm" onsubmit="submitForm(event)" novalidate data-reveal="up" data-delay=".15">
+        <div class="campo-row">
+          <div class="campo">
+            <input type="text"  name="nome"     required placeholder=" "/>
+            <label>Nome completo</label>
+            <span class="campo-barra"></span>
+          </div>
+          <div class="campo">
+            <input type="tel"   name="whatsapp" required placeholder=" "/>
+            <label>WhatsApp</label>
+            <span class="campo-barra"></span>
+          </div>
+        </div>
+        <div class="campo">
+          <select name="produto" required>
+            <option value="" disabled selected></option>
+            <option>Caixinha de Chocolate</option>
+            <option>Trufas Artesanais</option>
+            <option>Bolo de Pote Gelado</option>
+            <option>Brownie Recheado</option>
+            <option>Mousse Premium</option>
+            <option>Cesta Especial</option>
+            <option>Outro / Personalizado</option>
+          </select>
+          <label>Produto de interesse</label>
+          <span class="campo-barra"></span>
+        </div>
+        <div class="campo">
+          <textarea name="msg" rows="3" required placeholder=" "></textarea>
+          <label>Mensagem</label>
+          <span class="campo-barra"></span>
+        </div>
+        <button type="submit" class="btn-enviar">
+          <span class="btn-txt">Enviar Pedido</span>
+          <span class="btn-fill" aria-hidden="true"></span>
+        </button>
+
+        <div class="form-ok" id="formOk" role="status" aria-live="polite">
+          <svg viewBox="0 0 56 56" fill="none" width="56" height="56">
+            <circle cx="28" cy="28" r="26" stroke="currentColor" stroke-width="2" class="ok-circle"/>
+            <polyline points="16,28 24,36 40,20" stroke="currentColor" stroke-width="2.5"
+                      stroke-linecap="round" stroke-linejoin="round" class="ok-check"/>
+          </svg>
+          <strong>Pedido recebido!</strong>
+          <span>Em breve entraremos em contato pelo WhatsApp.</span>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo-alive logo-alive--footer">
+          <div class="logo-glow"></div>
+          <div class="logo-ring"></div>
+          <img src="images/marca/logo.png" alt="Tudo Mais Doce" class="footer-logo"
+               onerror="this.style.display='none'"/>
+          <span class="logo-sp sp1">✦</span>
+          <span class="logo-sp sp2">✦</span>
+          <span class="logo-sp sp3">✦</span>
+        </div>
+        <p>Doces artesanais feitos com amor e os melhores ingredientes para tornar cada momento especial.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Rodapé">
+        <strong>Navegação</strong>
+        <a href="#inicio">Início</a>
+        <a href="#produtos">Cardápio</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#vozes">Depoimentos</a>
+        <a href="#contato">Contato</a>
+      </nav>
+      <nav class="footer-nav" aria-label="Produtos">
+        <strong>Produtos</strong>
+        <a href="#produtos">Caixinhas de Chocolate</a>
+        <a href="#produtos">Trufas Artesanais</a>
+        <a href="#produtos">Bolos de Pote</a>
+        <a href="#produtos">Brownies</a>
+        <a href="#produtos">Cestas Especiais</a>
+      </nav>
+      <address class="footer-info">
+        <strong>Contato</strong>
+        <span>📍 Sua cidade, Estado</span>
+        <a href="https://wa.me/5511999999999">📱 (11) 99999-9999</a>
+        <a href="https://instagram.com/tudomaisdoce" target="_blank" rel="noopener" style="color:inherit;text-decoration:none">📸 @tudomaisdoce</a>
+        <span>⏰ Seg–Sáb: 8h–20h</span>
+      </address>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Tudo Mais Doce. Todos os direitos reservados.</span>
+      <span>Feito com 🍫 e muito amor</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
