@@ -1,0 +1,35 @@
+{
+  "name": "Tudo Mais Doce",
+  "short_name": "Tudo Mais Doce",
+  "description": "Doceria Artesanal Premium — doces feitos com amor para o seu dia.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0C0401",
+  "theme_color": "#0C0401",
+  "orientation": "portrait-primary",
+  "lang": "pt-BR",
+  "categories": ["food", "shopping"],
+  "icons": [
+    {
+      "src": "images/marca/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "images/marca/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "images/produtos/hero-principal.jpg",
+      "sizes": "1280x720",
+      "type": "image/jpeg",
+      "form_factor": "wide",
+      "label": "Tudo Mais Doce — Cardápio"
+    }
+  ]
+}
