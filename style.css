@@ -355,7 +355,10 @@ body.no-scroll { overflow: hidden; }
   border: none;
   cursor: none;
   padding: 6px;
-  margin-left: auto;
+  position: fixed;
+  top: 20px;
+  right: 28px;
+  z-index: 800;
 }
 .hamburger span {
   display: block;
@@ -1506,7 +1509,6 @@ body.no-scroll { overflow: hidden; }
   .menu-backdrop.open { display: block; }
   .hamburger { display: flex; }
   .hamburger span { pointer-events: none; }
-  .hamburger.open { z-index: 701; position: relative; }
   .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(4px, 5px); }
   .hamburger.open span:nth-child(2) { transform: rotate(-45deg) translate(4px, -5px); }
   .produto { grid-template-columns: 1fr; min-height: auto; }
