@@ -355,10 +355,9 @@ body.no-scroll { overflow: hidden; }
   border: none;
   cursor: none;
   padding: 6px;
-  position: fixed;
-  top: 20px;
-  right: 28px;
-  z-index: 800;
+  margin-left: auto;
+  position: relative;
+  z-index: 10;
 }
 .hamburger span {
   display: block;
